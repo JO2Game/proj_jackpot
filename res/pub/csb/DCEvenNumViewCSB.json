@@ -1,0 +1,2616 @@
+{
+  "ID": "726f58a0-e056-4208-9545-49b53e97ad68",
+  "Version": "3.10.0.0",
+  "Name": "DCEvenNumViewCSB",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 5,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "res/Tips_V2.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 29,
+            "Scale9OriginY": 29,
+            "Scale9Width": 32,
+            "Scale9Height": 32,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 290.0,
+              "Y": 170.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 6,
+            "Children": [
+              {
+                "FontSize": 20,
+                "ButtonText": "9-10",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 530.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9138,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 503.0,
+                "RightMargin": 23.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 9,
+                "ActionTag": -1365207132,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num9",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "8-9",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 470.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8103,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 443.0,
+                "RightMargin": 83.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 8,
+                "ActionTag": -1377879615,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num8",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "7-8",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 410.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7069,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 383.0,
+                "RightMargin": 143.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 7,
+                "ActionTag": -1884894727,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num7",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "6-7",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 350.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6034,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 323.0,
+                "RightMargin": 203.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 6,
+                "ActionTag": 1981865363,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num6",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "5-6",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 290.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 263.0,
+                "RightMargin": 263.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 5,
+                "ActionTag": -945076964,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num5",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "4-5",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 230.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3966,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 203.0,
+                "RightMargin": 323.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 4,
+                "ActionTag": 348526723,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num4",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "3-4",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 170.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2931,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 143.0,
+                "RightMargin": 383.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 3,
+                "ActionTag": -634693931,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num3",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "2-3",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 110.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1897,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 83.0,
+                "RightMargin": 443.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 2,
+                "ActionTag": -1258242936,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num2",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "1-2",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 50.0,
+                  "Y": 294.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0862,
+                  "Y": 0.8647
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 23.0,
+                "RightMargin": 503.0,
+                "TopMargin": 19.0,
+                "BottomMargin": 267.0,
+                "UserData": "selButton",
+                "Tag": 1,
+                "ActionTag": 676149696,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num1",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "18-19",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 530.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9138,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 503.0,
+                "RightMargin": 23.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 18,
+                "ActionTag": -358087980,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num18",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "17-18",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 470.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8103,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 443.0,
+                "RightMargin": 83.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 17,
+                "ActionTag": 1106098032,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num17",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "16-17",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 410.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7069,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 383.0,
+                "RightMargin": 143.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 16,
+                "ActionTag": -1420103650,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num16",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "15-16",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 350.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6034,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 323.0,
+                "RightMargin": 203.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 15,
+                "ActionTag": -631479496,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num15",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "14-15",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 290.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 263.0,
+                "RightMargin": 263.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 14,
+                "ActionTag": 69180863,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num14",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "13-14",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 230.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3966,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 203.0,
+                "RightMargin": 323.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 13,
+                "ActionTag": 2038581189,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num13",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "12-13",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 170.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2931,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 143.0,
+                "RightMargin": 383.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 12,
+                "ActionTag": 1222662418,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num12",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "11-12",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 110.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1897,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 83.0,
+                "RightMargin": 443.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 11,
+                "ActionTag": -1333421126,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num11",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "10-11",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 50.0,
+                  "Y": 234.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0862,
+                  "Y": 0.6882
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 23.0,
+                "RightMargin": 503.0,
+                "TopMargin": 79.0,
+                "BottomMargin": 207.0,
+                "UserData": "selButton",
+                "Tag": 10,
+                "ActionTag": -1674998534,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num10",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "27-28",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 531.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9155,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 504.0,
+                "RightMargin": 22.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 27,
+                "ActionTag": -289464124,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num27",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "26-27",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 471.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8121,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 444.0,
+                "RightMargin": 82.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 26,
+                "ActionTag": 1364728524,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num26",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "25-26",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 411.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7086,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 384.0,
+                "RightMargin": 142.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 25,
+                "ActionTag": -728037011,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num25",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "24-25",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 351.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6052,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 324.0,
+                "RightMargin": 202.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 24,
+                "ActionTag": -1908630781,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num24",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "23-24",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 291.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5017,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 264.0,
+                "RightMargin": 262.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 23,
+                "ActionTag": -1348792555,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num23",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "22-23",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.4815,
+                  "ScaleY": 0.4259
+                },
+                "Position": {
+                  "X": 230.0,
+                  "Y": 170.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3966,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 204.0,
+                "RightMargin": 322.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 22,
+                "ActionTag": 412731838,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num22",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "21-22",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 171.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2948,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 144.0,
+                "RightMargin": 382.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 21,
+                "ActionTag": -413714618,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num21",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "20-21",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 111.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1914,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 84.0,
+                "RightMargin": 442.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 20,
+                "ActionTag": -1483850018,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num20",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "19-20",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 51.0,
+                  "Y": 174.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0879,
+                  "Y": 0.5118
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 24.0,
+                "RightMargin": 502.0,
+                "TopMargin": 139.0,
+                "BottomMargin": 147.0,
+                "UserData": "selButton",
+                "Tag": 19,
+                "ActionTag": 1134480753,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num19",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 24,
+                "ButtonText": "Clear",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {},
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Btn_Small_Gold.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 84,
+                "Scale9Height": 42,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 70.0,
+                  "Y": 48.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1207,
+                  "Y": 0.1412
+                },
+                "PreSize": {
+                  "X": 0.1379,
+                  "Y": 0.1471
+                },
+                "LeftMargin": 30.0,
+                "RightMargin": 470.0,
+                "TopMargin": 267.0,
+                "BottomMargin": 23.0,
+                "Tag": 40,
+                "ActionTag": 683389606,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 50.0
+                },
+                "Name": "btnClear",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "32-33",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 292.0,
+                  "Y": 114.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5034,
+                  "Y": 0.3353
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 265.0,
+                "RightMargin": 261.0,
+                "TopMargin": 199.0,
+                "BottomMargin": 87.0,
+                "UserData": "selButton",
+                "Tag": 32,
+                "ActionTag": 1623996814,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num32",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "31-32",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 232.0,
+                  "Y": 114.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4,
+                  "Y": 0.3353
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 205.0,
+                "RightMargin": 321.0,
+                "TopMargin": 199.0,
+                "BottomMargin": 87.0,
+                "UserData": "selButton",
+                "Tag": 31,
+                "ActionTag": 1252918456,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num31",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "30-31",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 172.0,
+                  "Y": 114.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2966,
+                  "Y": 0.3353
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 145.0,
+                "RightMargin": 381.0,
+                "TopMargin": 199.0,
+                "BottomMargin": 87.0,
+                "UserData": "selButton",
+                "Tag": 30,
+                "ActionTag": 1408827406,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num30",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "29-30",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 112.0,
+                  "Y": 114.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1931,
+                  "Y": 0.3353
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 85.0,
+                "RightMargin": 441.0,
+                "TopMargin": 199.0,
+                "BottomMargin": 87.0,
+                "UserData": "selButton",
+                "Tag": 29,
+                "ActionTag": 448971330,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num29",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 20,
+                "ButtonText": "28-29",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {
+                  "R": 236,
+                  "G": 207,
+                  "B": 207
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Slider_V2.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 24,
+                "Scale9Height": 32,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 52.0,
+                  "Y": 114.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0897,
+                  "Y": 0.3353
+                },
+                "PreSize": {
+                  "X": 0.0931,
+                  "Y": 0.1588
+                },
+                "LeftMargin": 25.0,
+                "RightMargin": 501.0,
+                "TopMargin": 199.0,
+                "BottomMargin": 87.0,
+                "UserData": "selButton",
+                "Tag": 28,
+                "ActionTag": -1659343599,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 54.0
+                },
+                "Name": "num28",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 24,
+                "ButtonText": "Undo",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {},
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Btn_Small_Gold.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 84,
+                "Scale9Height": 42,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 170.0,
+                  "Y": 48.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2931,
+                  "Y": 0.1412
+                },
+                "PreSize": {
+                  "X": 0.1379,
+                  "Y": 0.1471
+                },
+                "LeftMargin": 130.0,
+                "RightMargin": 370.0,
+                "TopMargin": 267.0,
+                "BottomMargin": 23.0,
+                "Tag": 41,
+                "ActionTag": 262358477,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 50.0
+                },
+                "VisibleForFrame": false,
+                "Name": "btnUndo",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 24,
+                "ButtonText": "Back",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {},
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Btn_Small_Gold.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 84,
+                "Scale9Height": 42,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 410.0,
+                  "Y": 48.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7069,
+                  "Y": 0.1412
+                },
+                "PreSize": {
+                  "X": 0.1379,
+                  "Y": 0.1471
+                },
+                "LeftMargin": 370.0,
+                "RightMargin": 130.0,
+                "TopMargin": 267.0,
+                "BottomMargin": 23.0,
+                "Tag": 42,
+                "ActionTag": -661282678,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 50.0
+                },
+                "Name": "btnBack",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 24,
+                "ButtonText": "OK",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "res/DroidSansFallback.ttf",
+                  "Plist": ""
+                },
+                "TextColor": {},
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "res/Btn_Small_Gold.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 84,
+                "Scale9Height": 42,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 510.0,
+                  "Y": 48.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8793,
+                  "Y": 0.1412
+                },
+                "PreSize": {
+                  "X": 0.1379,
+                  "Y": 0.1471
+                },
+                "LeftMargin": 470.0,
+                "RightMargin": 30.0,
+                "TopMargin": 267.0,
+                "BottomMargin": 23.0,
+                "Tag": 43,
+                "ActionTag": 718076669,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 50.0
+                },
+                "Name": "btnOk",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -1024368754,
+            "Size": {
+              "X": 580.0,
+              "Y": 340.0
+            },
+            "Name": "bg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 580.0,
+          "Y": 340.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "res/Btn_Small_Gold.png",
+        "res/DroidSansFallback.ttf",
+        "res/Slider_V2.png",
+        "res/Tips_V2.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}
