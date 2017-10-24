@@ -185,9 +185,9 @@ function DCTopMessageView:setNewData(newData)
 	_VLP(self.sycnBtn, self.newDataLb, vl.OUT_L, cc.p(-20, 0))
 end
 
-function DCTopMessageView:onDestroy()
+function DCTopMessageView:onDelete()
 	
-	DCTopMessageView.super.onDestroy(self)
+	DCTopMessageView.super.onDelete(self)
 end
 
 function DCTopMessageView:onEnter()

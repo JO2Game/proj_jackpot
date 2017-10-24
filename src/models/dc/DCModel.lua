@@ -122,7 +122,8 @@ function DCModel:updateDCData(  )
 						temps = gp.str.split(d.opencode, "+")
 						dc.b1 = tonumber(temps[2])
 						temps = gp.str.split(temps[1], ",")
-						dc.r = table.sort(temps)
+						table.sort(temps)
+						dc.r = temps
 						--[[
 						dc.r1 = tonumber(temps[1])
 						dc.r2 = tonumber(temps[2])
