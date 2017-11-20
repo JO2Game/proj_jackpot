@@ -235,17 +235,17 @@ function UIDataGraphView:_initBtn()
 			end
 		end
 	end
-	self.functionBtn = gp.Button:create("gui_box8.png", _btnCall, true, _TT("dc","DC54"))
+	self.functionBtn = gp.Button:create("gui_box8.png", _btnCall, _TT("dc","DC54"))
 	self.functionBtn:setContentSize(BTN_SIZE)
 	self:addChild(self.functionBtn, 2)
 	self.functionBtn:setTag(1)
 
-	self.chartBtn = gp.Button:create("gui_box8.png", _btnCall, true, _TT("dc","DC57"))
+	self.chartBtn = gp.Button:create("gui_box8.png", _btnCall, _TT("dc","DC57"))
 	self.chartBtn:setContentSize(BTN_SIZE)
 	self:addChild(self.chartBtn, 2)
 	self.chartBtn:setTag(2)
 
-	self.ballBtn = gp.Button:create("gui_box8.png", _btnCall, true, _TT("dc","DC62"))
+	self.ballBtn = gp.Button:create("gui_box8.png", _btnCall, _TT("dc","DC62"))
 	self.ballBtn:setContentSize(BTN_SIZE)
 	self:addChild(self.ballBtn, 2)
 	self.ballBtn:setTag(3)

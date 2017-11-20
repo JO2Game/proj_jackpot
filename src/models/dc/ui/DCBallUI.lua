@@ -25,14 +25,14 @@ function DCBallUI:onEnter(  )
 		self.topView:setNewData(context)
 	end
 	
-	gp.MessageMgr:registerEvent(self.sn, gei.DC_ADD_HISTORY_DATA, _ADD_HISTORY_DATA_Handle)
+	gp.MessageMgr:regEvent(self.sn, ENT.DC_ADD_HISTORY_DATA, _ADD_HISTORY_DATA_Handle)
 
 	_ADD_HISTORY_DATA_Handle()	
 end
 
 
 function DCBallUI:onExit()
-	gp.MessageMgr:unRegisterAll(self.sn)
+	gp.MessageMgr:unRegAll(self.sn)
 end
 
 return DCBallUI

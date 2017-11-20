@@ -70,7 +70,7 @@ function DCStorageMgr:saveConditionToSet()
 	self.conditionSet[key] = gp.table.copy(self.condition)
 	--table.insert(self.conditionSet, self.condition)
 	self:saveConditionSet()
-	gp.MessageMgr:dispatchEvent(gei.DC_ADD_CONDITION_DATA)
+	gp.MessageMgr:dispatchEvent(ENT.DC_ADD_CONDITION_DATA)
 end
 
 --条件数据集合
@@ -120,7 +120,7 @@ function DCStorageMgr:insertDrawData(data)
 	if data then
 		table.insert(self.drawResult, data)
 		self:saveDrawResult()
-		gp.MessageMgr:dispatchEvent(gei.DC_DRAW_RESULT)
+		gp.MessageMgr:dispatchEvent(ENT.DC_DRAW_RESULT)
 	end
 end
 

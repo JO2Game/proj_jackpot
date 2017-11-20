@@ -23,9 +23,6 @@ function DCBaseNumView:onInit(csbNode, numCount)
 	self.unableSelNums = {}
 
 	local function _numBtnCall(sender)
-
-		
-
 		local tag = sender:getTag()
 		if tag>=1 and tag<=self.maxCount then
 			local btnState = sender:getBtnState()
@@ -71,7 +68,7 @@ function DCBaseNumView:onInit(csbNode, numCount)
 			JOWinMgr:Instance():removeWin(self)
 		end
 	end
-
+	
 	local btnClear = gp.JOCsbLuaMgr:getChild(self.csbNode, "btnClear")
 	btnClear:setCall(_functBtnCall)
 	-- local btnUndo = gp.JOCsbLuaMgr:getChild(self.csbNode, "btnUndo")

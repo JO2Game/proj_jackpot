@@ -57,7 +57,7 @@ function DCOptionalResultUI:ctor()
 		JOWinMgr:Instance():showWin(fullNum, gd.LAYER_WIN)
 	end
 	self.searchEmptyStr = "搜索号码"
-	self.searchNumBtn = gp.Button:create("Top2Bg_V2.png", _btnNumCall, true, self.searchEmptyStr)
+	self.searchNumBtn = gp.Button:create("Top2Bg_V2.png", _btnNumCall, self.searchEmptyStr)
 	self.searchNumBtn:setContentSize(cc.size(140,38))
 	self.searchNumBtn:setTitleArg("", 17, gd.FCOLOR.c1, 0)
 	self:addChild(self.searchNumBtn)

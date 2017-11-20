@@ -1,74 +1,74 @@
-local ToGame = ToGame or {}
 
+local ProjToGame = class("ProjToGame")
 
-function ToGame:_onCallback(key,jsonParam)	
+function ProjToGame:_onCallback(key,jsonParam)	
 		
 		if key == "ToGame_StartUp" then	
 			
-			ToGame:startUp()
+			self:startUp()
 
 		elseif key == "ToGame_LogoClosed" then	
 		
-			ToGame:logoClosed()
+			self:logoClosed()
 
 		elseif key == "ToGame_ShowVersionUpdateDlg" then
 		
-			ToGame:showVersionUpdateDlg()
+			self:showVersionUpdateDlg()
 
 		elseif key == "ToGame_ShowDownloadDlg" then
 		
-			ToGame:showDownloadDlg(jsonParam)
+			self:showDownloadDlg(jsonParam)
 
 		elseif key == "ToGame_updateProgress" then	
 		
-			ToGame:updateProgress(jsonParam)
+			self:updateProgress(jsonParam)
 
 		elseif key == "ToGame_DownloadError" then
 		
-			ToGame:showVersionUpdateDlg()
+			self:showVersionUpdateDlg()
 
 		elseif key == "ToGame_EndCheckUpdate" then	
 		
-			ToGame:endCheckUpdate()
+			self:endCheckUpdate()
 			
 		elseif key == "ToGame_LoginSuccess" then			
 			
-			ToGame:loginSuccess()
+			self:loginSuccess()
 			
 		elseif key == "ToGame_IdentityResult" then	
 		
-			ToGame:identityResult(jsonParam)
+			self:identityResult(jsonParam)
 		
 		elseif key == "ToGame_ChangeAccount" then
 		
-			ToGame:changeAccount()
+			self:changeAccount()
 			
 		elseif key == "ToGame_PickImage" then
 		
-			ToGame:pickImage(jsonParam)
+			self:pickImage(jsonParam)
 		elseif key == "ToGame_PayAlertClose" then
 	
-			ToGame:payAlertClose()			
+			self:payAlertClose()			
 		end
 
 		return true;
 end
 
 
-function ToGame:startUp()
+function ProjToGame:startUp()
 	GameWorld:getLoginModule():requestServerList()	
 end
 
-function ToGame:logoClosed()
+function ProjToGame:logoClosed()
 	GameWorld:getLoginModule():onLogoClosed()
 end
 
-function ToGame:payAlertClose()
+function ProjToGame:payAlertClose()
 	PlatformMgr.isPaying = false
 	GameWorld:getUIMgr():clearAlert()
 end
 
-function ToGame:showVersionUpdateDlg()
+function ProjToGame:showVersionUpdateDlg()
 	GameWorld:getUIMgr():removeWaiting()
 	local function _alertCallback(tag)			
         local mgr = GameWorld:getLoginModule():getMgr()
@@ -117,19 +117,19 @@ function ToGame:showVersionUpdateDlg()
 	GameWorld:getUIMgr():showAlert(alert)	
 end
 
-function ToGame:showDownloadDlg(progress)	
-	LOG_DEBUG("ToGame","showDownloadView progress="..tostring(progress))	
+function ProjToGame:showDownloadDlg(progress)	
+	LOG_DEBUG("ProjToGame","showDownloadView progress="..tostring(progress))	
 	GameWorld:getLoginModule():showLogin()
 	PlatformMgr:ToShell_ToCloseLogo()
 	GameWorld:getLoginModule():showDownLoadRes(progress)		
 end
 
-function ToGame:updateProgress(progress)
-	LOG_DEBUG("ToGame","updateDownloadProgress progress="..tostring(progress))
+function ProjToGame:updateProgress(progress)
+	LOG_DEBUG("ProjToGame","updateDownloadProgress progress="..tostring(progress))
 	GameWorld:getLoginModule():showDownLoadRes(progress)	
 end
 
-function ToGame:endCheckUpdate()
+function ProjToGame:endCheckUpdate()
 	cc.Director.getInstance():resume()
 	local platformModule = nil
 	if DeviceUtil.platform == "android" then
@@ -151,11 +151,11 @@ function ToGame:endCheckUpdate()
 end
 
 
-function ToGame:loginSuccess()
+function ProjToGame:loginSuccess()
 	GameWorld:fastDispatchEvent00(Event_Login.Login_InputedAccount)
 end
 -- 获取预加载的数据。
-function ToGame:identityResult(jsonParam)
+function ProjToGame:identityResult(jsonParam)
 	local jData = gp.json.jsonTableFromString(jsonParam)
 	local mgr = GameWorld:getLoginModule():getMgr()
 	mgr.identityId = jData.identityId
@@ -185,22 +185,22 @@ function ToGame:identityResult(jsonParam)
 	GameWorld:getLoginModule():requestResJson()
 end
 
-function ToGame:changeAccount()
+function ProjToGame:changeAccount()
 	PlatformMgr:reLogin(false)
 end
 
-function ToGame:showWaiting()
+function ProjToGame:showWaiting()
 	--showWaiting(18)
 	GameWorld:getUIMgr():showWaitingAlways()
 end
 
-function ToGame:hideWaiting()
+function ProjToGame:hideWaiting()
 	--removeWaiting()
 	GameWorld:getUIMgr():removeWaitingAlways()
 end
 
-function ToGame:pickImage(jsonParam)
+function ProjToGame:pickImage(jsonParam)
 	
 end
 
-return ToGame
+return ProjToGame

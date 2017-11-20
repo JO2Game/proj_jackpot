@@ -408,7 +408,7 @@ function DCAnalysisMgr:tick(  )
 				self.tempResultCall(self.tempRetList, resultCnt)
 			end
 			JOWinMgr:Instance():clear(gd.LAYER_WAIT)
-			--gp.MessageMgr:dispatchEvent(gei.DC_ANALYSIS_RESULT)
+			--gp.MessageMgr:dispatchEvent(ENT.DC_ANALYSIS_RESULT)
 
 			return
 		end

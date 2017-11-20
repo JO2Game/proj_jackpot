@@ -33,6 +33,7 @@ function TmpSelNumUI:ctor(size, txt, call, numType)
 	end
 
 	local function _btnCall( sender )
+	---[[
 		if self.numType==PAD_TYPE.FULL then
 			local fullNum = glg.DCFullNumView.new()
 			fullNum:setDefSelNum(self.nums)
@@ -75,8 +76,9 @@ function TmpSelNumUI:ctor(size, txt, call, numType)
 			numPad:setOkCall(_numPadCall)
 			JOWinMgr:Instance():showWin(numPad, gd.LAYER_WIN)
 		end
+		--]]
 	end
-	self.filterNumBtn = gp.Button:create("Top2Bg_V2.png", _btnCall, true, txt)
+	self.filterNumBtn = gp.Button:create("Top2Bg_V2.png", _btnCall, txt)
 	self.filterNumBtn:setContentSize(cc.size(120,38))
 	self.filterNumBtn:setTitleArg("", 17, gd.FCOLOR.c1, 0)
 	self:addChild(self.filterNumBtn)
@@ -362,7 +364,7 @@ function TmpAIUI:ctor(size)
 		end
 		self.selConditions = {}
 	end
-	self.clearBtn = gp.Button:create("Top2Bg_V2.png", _clearCall, true, "清空")
+	self.clearBtn = gp.Button:create("Top2Bg_V2.png", _clearCall, "清空")
 	self.clearBtn:setContentSize(cc.size(100,38))
 	self.clearBtn:setTitleArg("", 17, gd.FCOLOR.c1, 0)
 	self:addChild(self.clearBtn)
@@ -470,14 +472,14 @@ function DCConditionUI:ctor()
 
 	self.title:setString("条件信息")
 	
-	local btn1 = gp.Button:create("Btn_Small_Gold.png", nil, true, "过滤条件")
+	local btn1 = gp.Button:create("Btn_Small_Gold.png", nil, "过滤条件")
 	btn1:setContentSize(cc.size(100,40))
 	btn1:setTitleArg("", 18)
 	btn1:setTag(1)
 	self:addChild(btn1)
 	_VLP(btn1, self.title, vl.OUT_B_IN_L, cc.p(0, -34))
 
-	local btn2 = gp.Button:create("Btn_Small_Gold.png", nil, true, "智能条件")
+	local btn2 = gp.Button:create("Btn_Small_Gold.png", nil, "智能条件")
 	btn2:setContentSize(cc.size(100,40))
 	btn2:setTitleArg("", 18)
 	btn2:setTag(2)
@@ -529,7 +531,7 @@ function DCConditionUI:ctor()
 		GMODEL(MOD.DC):getDCStorageMgr():saveCondition()
 	end
 
-	local btn3 = gp.Button:create("Btn_Small_Red.png", _saveCall, true, "保存")
+	local btn3 = gp.Button:create("Btn_Small_Red.png", _saveCall, "保存")
 	btn3:setContentSize(cc.size(90,40))
 	btn3:setTitleArg("", 18)
 	btn3:setTag(3)
@@ -539,7 +541,7 @@ function DCConditionUI:ctor()
 	local function _addCall( sender )
 		GMODEL(MOD.DC):getDCStorageMgr():saveConditionToSet()
 	end
-	local btn4 = gp.Button:create("Btn_Small_Red.png", _addCall, true, "添加")
+	local btn4 = gp.Button:create("Btn_Small_Red.png", _addCall, "添加")
 	btn4:setContentSize(cc.size(90,40))
 	btn4:setTitleArg("", 18)
 	btn4:setTag(4)

@@ -1,14 +1,13 @@
 
-local ToShell = ToShell or {}
+local ProjToShell = class("ProjToShell")
 
-
-function ToShell:OpenUserCenter()	
+function ProjToShell:OpenUserCenter()	
 	return PlatformMgr:_callShellFunction("ToShell_OpenUserCenter")	
 end
 
 
 
-function ToShell:reLogin(bCallSDK)
+function ProjToShell:reLogin(bCallSDK)
 	--JOGame:shutdown()	
 	
 	local function _clearCallback(bFinish)
@@ -30,7 +29,7 @@ end
 --TO_Shell 相关 BEGIN
 
 --注册callGameFunction的句柄
-function ToShell:registerToLuaCallback()
+function ProjToShell:registerToLuaCallback()
 	LOG_DEBUG("PlatformMgr","registerToLuaCallback ... BEGIN");
 	if PlatformMgr:_registerGameCallback() == nil then		
 		GameWorld:getLoginModule():requestServerList()
@@ -38,14 +37,14 @@ function ToShell:registerToLuaCallback()
 	LOG_DEBUG("PlatformMgr","requestServerList ... BEGIN");
 end
 
-function ToShell:closeLogo()
+function ProjToShell:closeLogo()
 	LOG_DEBUG("PlatformMgr","ToShell_ToCloseLogo ... BEGIN");
 	if PlatformMgr:_callShellFunction("ToShell_ToCloseLogo", "") == nil then
 		GameWorld:getLoginModule():onLogoClosed();		
 	end
 end
 --平台检测版本，用于升级客户端
-function ToShell:localServerId()
+function ProjToShell:localServerId()
 	LOG_DEBUG("PlatformMgr","ToShell_LocalServerId ... BEGIN");
 	local mgr = GameWorld:getLoginModule():getMgr()
 	if mgr.defServerId == -1 then
@@ -60,7 +59,7 @@ function ToShell:localServerId()
 end
 
 
-function ToShell:sdkLogin()    
+function ProjToShell:sdkLogin()    
 	LOG_DEBUG("PlatformMgr","ToShell_SdkLogin ... BEGIN");
 	
 	if PlatformMgr:_callShellFunction("ToShell_SdkLogin", "") == nil then							
@@ -70,7 +69,7 @@ end
 
 --获取config信息
 --获取config.xml的配置
-function ToShell:getConfig(key)
+function ProjToShell:getConfig(key)
 	LOG_DEBUG("PlatformMgr","ToShell_GetConfig key="..tostring(key));
 	if key == nil or type(key) ~= "string" then
 		LOG_WARN("PlatformMgr", "ToShell_GetConfig key == [%s] error", tostring(key))
@@ -79,7 +78,7 @@ function ToShell:getConfig(key)
 	return PlatformMgr:_callShellFunction("ToShell_GetConfig", key)	
 end
 -- 获取预加载的数据。
-function ToShell:getPreLoadData(key)
+function ProjToShell:getPreLoadData(key)
 	LOG_DEBUG("PlatformMgr","ToShell_GetPreLoadData key="..tostring(key));
 	if key == nil or type(key) ~= "string" then
 		LOG_WARN("PlatformMgr", "ToShell_GetPreLoadData key == [%s] error", tostring(key))
@@ -93,27 +92,27 @@ end
 
 100以外是新手引导的步骤记录
 --]]
-ToShell.playerStep_ResBeginDownload = "12" --资源开始下载 （要拼个资源版本号 ","为分隔符）
-ToShell.playerStep_ResDownloadError = "13"	--资源下载出错
-ToShell.playerStep_ResDownloadSuccess = "14" --资源下载完成
-ToShell.playerStep_LoadResSuccess = "17" --资源加载完成
-ToShell.playerStep_EnterMainScence = "18" --第一次进入游戏场景
-ToShell.playerStep_FirstEnterGuan = "19" --第一次进入关卡
+ProjToShell.playerStep_ResBeginDownload = "12" --资源开始下载 （要拼个资源版本号 ","为分隔符）
+ProjToShell.playerStep_ResDownloadError = "13"	--资源下载出错
+ProjToShell.playerStep_ResDownloadSuccess = "14" --资源下载完成
+ProjToShell.playerStep_LoadResSuccess = "17" --资源加载完成
+ProjToShell.playerStep_EnterMainScence = "18" --第一次进入游戏场景
+ProjToShell.playerStep_FirstEnterGuan = "19" --第一次进入关卡
 
-function ToShell:playerStep(iStep)
+function ProjToShell:playerStep(iStep)
 	LOG_DEBUG("PlatformMgr","ToShell_PlayerStep iStep="..iStep);
 	PlatformMgr:_callShellFunction("ToShell_PlayerStep", tostring(iStep))	
 end
 
 --通知服务器列表请求结果(成功&失败)result:整个服务器列表json // 失败时返回""
 --其实用于告诉SDK打开登录界面
-function ToShell:serverListResult(result)
+function ProjToShell:serverListResult(result)
 	LOG_DEBUG("PlatformMgr","serverListResult ...BEGIN");
 	PlatformMgr:_callShellFunction("ToShell_ServerListResult", result)	
 end
 
 
-function ToShell:pay(payRef)
+function ProjToShell:pay(payRef)
 	LOG_DEBUG("PlatformMgr","ToShell_Pay ...BEGIN");
 	--加入正在充值提示框
 	
@@ -142,7 +141,7 @@ function ToShell:pay(payRef)
 	
 end
 
-function ToShell:playerInfo(hero)
+function ProjToShell:playerInfo(hero)
 
 	LOG_DEBUG("PlatformMgr","ToShell_PlayerInfo ...BEGIN");	
 	
@@ -159,18 +158,18 @@ function ToShell:playerInfo(hero)
 	
 end
 
-function ToShell:consumeGold(subGlod)
+function ProjToShell:consumeGold(subGlod)
 	LOG_DEBUG("PlatformMgr","ToShell_ConsumeGold ...BEGIN");	
 	PlatformMgr:_callShellFunction("ToShell_ConsumeGold", tostring(subGlod))	
 end
 
 --按键回调
-function ToShell:exit()
+function ProjToShell:exit()
 	LOG_DEBUG("PlatformMgr","ToShell_Exit ...BEGIN");
 	PlatformMgr:_callShellFunction("ToShell_Exit", "")	
 end
 
-function ToShell:getVersion()	
+function ProjToShell:getVersion()
 	local version = PlatformMgr:_callShellFunction("ToShell_GetVersion", "")
 	if version == nil then
 		version = "1.0.0.0"
@@ -178,14 +177,14 @@ function ToShell:getVersion()
 	return version	
 end
 
-function ToShell:upgradeLvl()	
+function ProjToShell:upgradeLvl()	
 	local hero = GameWorld:getPlayerModule():getHero()
 	if hero then
 		PlatformMgr:_callShellFunction("ToShell_UpgradeLvl", tostring(hero.level))		
 	end	
 end
 
-function ToShell:createRole()
+function ProjToShell:createRole()
 	local hero = GameWorld:getPlayerModule():getHero()	
 	if hero then
 		local jData = {}
@@ -196,17 +195,17 @@ function ToShell:createRole()
 	end	
 end
 
-function ToShell:pickImage()
+function ProjToShell:pickImage()
 	PlatformMgr:_callShellFunction("ToShell_PickImage", "")	
 end
 
-function ToShell:openWebView(url)    
+function ProjToShell:openWebView(url)    
     if url then
     	PlatformMgr:_callShellFunction("ToShell_OpenWebView", url)        
     end	
 end
 
-function ToShell:thirdPartyPayment()
+function ProjToShell:thirdPartyPayment()
     local loginMgr = GameWorld:getLoginModule():getMgr();
     if loginMgr.rechargeParams or GameConfig.Language =="tw" then
     	PlatformMgr:_callShellFunction("ToShell_ThirdPartyPayment", "")        
@@ -217,8 +216,8 @@ end
 
 --错误处理 BEGIN
 
-ToShell.Prompt_LoginGameServer = 1
-function ToShell:handlePrompt(promptType, param)
+ProjToShell.Prompt_LoginGameServer = 1
+function ProjToShell:handlePrompt(promptType, param)
 	local msg = _TT(18)--"错误回调！";
 	if promptType == PlatformMgr.Prompt_LoginGameServer then
 		if param == 1 then
@@ -235,12 +234,12 @@ function ToShell:handlePrompt(promptType, param)
 	showNoticeString(msg)
 end
 --[[
-ToShell.Error_ServerList = _TT(23)--获取服务列表失败，请退出游戏再重试！
-ToShell.Error_ResouresList = _TT(24)--请求资源列表出错，请检查网络！
-ToShell.Error_ResouresDown = _TT(25)--资源下载出错，请检查网络！
-ToShell.Error_ResouresMd5 = _TT(26)--下载资源损坏，请重试！
+ProjToShell.Error_ServerList = _TT(23)--获取服务列表失败，请退出游戏再重试！
+ProjToShell.Error_ResouresList = _TT(24)--请求资源列表出错，请检查网络！
+ProjToShell.Error_ResouresDown = _TT(25)--资源下载出错，请检查网络！
+ProjToShell.Error_ResouresMd5 = _TT(26)--下载资源损坏，请重试！
 --]]
-function ToShell:handleError(errorType)
+function ProjToShell:handleError(errorType)
 	local function _callback()
 		cc.Director:getInstance():endToLua()
 	end
@@ -250,4 +249,4 @@ end
 
 --错误处理 END
 
-return ToShell
+return ProjToShell

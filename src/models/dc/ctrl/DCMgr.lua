@@ -145,7 +145,7 @@ function DCMgr:insertDCData(dcDatas)
 		end
 
 		self.newDCData = nil
-		gp.MessageMgr:dispatchEvent(gei.DC_ADD_HISTORY_DATA)
+		gp.MessageMgr:dispatchEvent(ENT.DC_ADD_HISTORY_DATA)
 	end
 end
 

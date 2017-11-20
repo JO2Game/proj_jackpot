@@ -160,7 +160,7 @@ function DCOptionalDataUI:_initScrollView()
 		end
 	end
 
-	self.removeBtn = gp.Button:create("Btn_Small_Red.png", _btnCall, true, "删除")
+	self.removeBtn = gp.Button:create("Btn_Small_Red.png", _btnCall, "删除")
 	self.removeBtn:setContentSize(cc.size(100,40))
 	self.removeBtn:setTitleArg("", 18)
 	self.removeBtn:setTag(1)
@@ -168,7 +168,7 @@ function DCOptionalDataUI:_initScrollView()
 	self.removeBtn:setVisible(false)
 	_VLP(self.removeBtn, self.tableView, vl.OUT_B_IN_L, cc.p(0,-2))
 
-	self.actionBtn = gp.Button:create("Btn_Small_Gold.png", _btnCall, true, "开奖")
+	self.actionBtn = gp.Button:create("Btn_Small_Gold.png", _btnCall, "开奖")
 	self.actionBtn:setContentSize(cc.size(100,40))
 	self.actionBtn:setTitleArg("", 18)
 	self.actionBtn:setTag(2)
@@ -176,7 +176,7 @@ function DCOptionalDataUI:_initScrollView()
 	self.actionBtn:setVisible(false)
 	_VLP(self.actionBtn, self.tableView, vl.OUT_B_IN_R, cc.p(0,-2))
 
-	self.listBtn = gp.Button:create("Btn_Small_Gold.png", _btnCall, true, "列表")
+	self.listBtn = gp.Button:create("Btn_Small_Gold.png", _btnCall, "列表")
 	self.listBtn:setContentSize(cc.size(100,40))
 	self.listBtn:setTitleArg("", 18)
 	self.listBtn:setTag(3)
@@ -220,12 +220,12 @@ function DCOptionalDataUI:onEnter(  )
 		self.tableView:clearSel()
 	end
 	
-	gp.MessageMgr:registerEvent(self.sn, gei.DC_ADD_CONDITION_DATA, _ADD_CONDITION_DATA_Handle)
+	gp.MessageMgr:regEvent(self.sn, ENT.DC_ADD_CONDITION_DATA, _ADD_CONDITION_DATA_Handle)
 end
 
 
 function DCOptionalDataUI:onExit()
-	gp.MessageMgr:unRegisterAll(self.sn)
+	gp.MessageMgr:unRegAll(self.sn)
 	DCOptionalDataUI.super.onExit(self)
 end
 

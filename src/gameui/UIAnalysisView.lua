@@ -92,7 +92,7 @@ function UIAnalysisView:_initPeriodUI( )
 		local from, to = self.period:getSelFromTo()
 		self:onSelStageRange(self.allStage[from], self.allStage[to])
 	end
-	self.startBtn = gp.Button:create("DoBtn_V2.png", _call, true)
+	self.startBtn = gp.Button:create("DoBtn_V2.png", _call)
 	self.startBtn:setScale(0.68)
 	self:addChild(self.startBtn, MENU_LAYER)
 	_VLP(self.startBtn, self.period, vl.OUT_R, cc.p(20,0))

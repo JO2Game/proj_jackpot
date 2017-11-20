@@ -11,7 +11,7 @@ function UICommonCell:ctor(size, callback, beSelType)
     
     local btn = nil
     if beSelType==true then
-    	btn = gp.SelButton:create("Border_V2.png", nil, true)
+    	btn = gp.SelButton:create("Border_V2.png", nil)
     	btn:setCatchTouch(false)
     else
     	local function _btnCall()
@@ -19,7 +19,7 @@ function UICommonCell:ctor(size, callback, beSelType)
 				self.callback(sender, self.data)
 			end
 	    end
-    	btn = gp.Button:create("Border_V2.png", _btnCall, true)
+    	btn = gp.Button:create("Border_V2.png", _btnCall)
     end
 
 	btn:setContentSize(size)

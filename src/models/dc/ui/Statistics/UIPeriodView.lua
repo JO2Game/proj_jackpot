@@ -223,17 +223,17 @@ function UIPeriodView:_initComponents()
 		self.maskLayer:setVisible(beVisible)
 	end
 
-	self.periodBtn = gp.Button:create("Top2Bg_V2.png", _btnCall, true)
+	self.periodBtn = gp.Button:create("Top2Bg_V2.png", _btnCall)
 	self.periodBtn:setContentSize(FUNCTION_CELL_SIZE)
 	self:addChild(self.periodBtn)
 	self.periodBtn:setTag(1)
 
-	self.fromBtn = gp.Button:create("Top2Bg_V2.png", _btnCall, true)
+	self.fromBtn = gp.Button:create("Top2Bg_V2.png", _btnCall)
 	self.fromBtn:setContentSize(FUNCTION_CELL_SIZE)
 	self:addChild(self.fromBtn)
 	self.fromBtn:setTag(2)
 
-	self.toBtn = gp.Button:create("Top2Bg_V2.png", _btnCall, true)
+	self.toBtn = gp.Button:create("Top2Bg_V2.png", _btnCall)
 	self.toBtn:setContentSize(FUNCTION_CELL_SIZE)
 	self:addChild(self.toBtn)
 	self.toBtn:setTag(3)

@@ -101,7 +101,7 @@ function DCDrawResultUI:_initBtn()
 			gp.Factory:alertViewStd(nil, _TT("dc","DC39"), _alertCall)
 		end
 	end
-	local btnClear = gp.Button:create("Top2Bg_V2.png", _btnCall, true, "清空")
+	local btnClear = gp.Button:create("Top2Bg_V2.png", _btnCall, "清空")
 	--btn1:setTitleArg("", -1, gd.FCOLOR.c12, 2, gd.FCOLOR.c9)	
 	btnClear:setContentSize(cc.size(180,38))	
 	self:addChild(btnClear)
@@ -115,12 +115,12 @@ function DCDrawResultUI:onEnter(  )
 	local function _ADD_DRAW_RESULT_Handle()
 		self:setupData()
 	end
-	gp.MessageMgr:registerEvent(self.sn, gei.DC_DRAW_RESULT, _ADD_DRAW_RESULT_Handle)
+	gp.MessageMgr:regEvent(self.sn, ENT.DC_DRAW_RESULT, _ADD_DRAW_RESULT_Handle)
 	self:setupData()
 end
 
 function DCDrawResultUI:onExit()
-	gp.MessageMgr:unRegisterAll(self.sn)
+	gp.MessageMgr:unRegAll(self.sn)
 	DCDrawResultUI.super.onExit(self)
 end
 

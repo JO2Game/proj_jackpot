@@ -527,7 +527,7 @@ function DCStatisticsMgr:Interval3Even_desc(  )
 	end
 	local t = "a b "
 	local arr = gp.str.split(t, " ")
-	print("arr "..#arr)
+	--print("arr "..#arr)
 	local evenCnt = 1
 	local evenMap = {}
 	local allData = GMODEL(MOD.DC):getDCMgr():getAllData()

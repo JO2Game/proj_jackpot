@@ -17,7 +17,7 @@ function DCNumberView:ctor(size, totalRed, totalBlue)
 	local function _clearCall()
 		self:clear()
 	end
-	local clearBtn = gp.Button:create("gui_btn4.png", _clearCall, true, "ClEAR")
+	local clearBtn = gp.Button:create("gui_btn4.png", _clearCall, "ClEAR")
 	clearBtn:setContentSize(cc.size(100,40))
 	self:addChild(clearBtn)
 	_VLP(clearBtn, self, vl.IN_BL, cc.p(0,0))
@@ -56,7 +56,7 @@ function DCNumberView:_initBalls( totalRed, totalBlue )
 	---[[
 	local tempIdx = 0;
 	for i=1, totalRed, 1 do
-		local ball = gp.SelButton:create("gui_box4.png", _redBtnCall, true, tostring(i))
+		local ball = gp.SelButton:create("gui_box4.png", _redBtnCall, tostring(i))
 		ball:setContentSize(BALL_SIZE)
 		ball:setTag(i)
 		self:addChild(ball)
@@ -102,7 +102,7 @@ function DCNumberView:_initBalls( totalRed, totalBlue )
 	local changeRowIdx2 = 5	
 	tempIdx = 0;
 	for i=1, totalBlue, 1 do
-		local ball = gp.SelButton:create("gui_box6.png", _blueBtnCall, true, tostring(i))
+		local ball = gp.SelButton:create("gui_box6.png", _blueBtnCall, tostring(i))
 		ball:setContentSize(BALL_SIZE)
 		ball:setTag(i)
 		self:addChild(ball)

@@ -27,6 +27,10 @@ _gcf.LOAD_DEPRECATED_API = false
 -- load shortcodes API
 _gcf.LOAD_SHORTCODES_API = true
 
+--设置包的默认语言, 可以为nil
+_gcf.LANGUAGE = "zh"
+
+
 -- design resolution
 _gcf.DESIGN_WIDTH = 1136-- CONFIG_SCREEN_WIDTH  = 640
 _gcf.DESIGN_HEIGHT = 640-- CONFIG_SCREEN_HEIGHT = 960
@@ -56,6 +60,8 @@ _gcf.LOG_IGNORE_WARN = {}
 _gcf.LOG_IGNORE_ERROR = {}
 
 --******************网络配置****************************************
+--服务器大小端
+_gcf.BIG_ENDIAN = true
 _gcf.SERVER_HTTP = "http://static.wpzj.gzyouai.com/servers/uc.json" --正式服UC
 _gcf.IP="192.168.1.101"
 _gcf.PORT=18081

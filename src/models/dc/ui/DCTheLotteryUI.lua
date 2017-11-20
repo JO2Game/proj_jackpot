@@ -212,7 +212,7 @@ end
 
 function DCTheLotteryUI:onExit()
 	gp.TickMgr:unRegister(self)
-	--gp.MessageMgr:unRegisterAll(self.sn)
+	--gp.MessageMgr:unRegAll(self.sn)
 	DCTheLotteryUI.super.onExit(self)
 end
 
