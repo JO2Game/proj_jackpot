@@ -42,6 +42,7 @@ gp.ModelMgr:modelSubLua( MOD.DC, "models/dc/ui/DCOptionalDataUI" )
 gp.ModelMgr:modelSubLua( MOD.DC, "models/dc/ui/DCOptionalResultUI" )
 gp.ModelMgr:modelSubLua( MOD.DC, "models/dc/ui/DCDataAnalysisUI" )
 gp.ModelMgr:modelSubLua( MOD.DC, "models/dc/ui/DCDrawResultUI" )
+gp.ModelMgr:modelSubLua( MOD.DC, "models/dc/ui/DCDrawResultOptionalUI" )
 gp.ModelMgr:modelSubLua( MOD.DC, "models/dc/ui/DCTheLotteryUI" )
 
 

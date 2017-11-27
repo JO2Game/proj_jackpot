@@ -6,7 +6,8 @@ function UIDropView:ctor()
 	self:setCatchTouch(true)
 	local selfSize = cc.size(220, gd.VISIBLE_SIZE.height-74+12)
 	self:setContentSize(selfSize)
-
+	
+	--local bg = gp.Scale9Sprite:create("selectionTags_sc.png")
 	local bg = gp.Scale9Sprite:create("StoryCase_V2.png")
 	bg:setContentSize(selfSize)
 	self:addChild(bg)
