@@ -71,11 +71,11 @@ function DCDataCell:ctor(callback)
 	self.luckB2 = gp.Label:create("", 20, gd.FCOLOR.c13)
 	self.luckB2:setAnchorPoint(cc.p(1, 0.5))
 	self:addChild(self.luckB2)
-	_VLP(self.luckB2, self.luckB1, vl.OUT_L, cc.p(-12,0))
+	_VLP(self.luckB2, btn, vl.OUT_L, cc.p(-68,0))
 
 end
 
-function DCDataCell:setData(data)
+function DCDataCell:setData(data, isMark)
 	self.info = data
 
 	self.luckR1:setString(string.format("%02d",data[1]))
@@ -95,43 +95,28 @@ function DCDataCell:setData(data)
 	else
 		self.luckB2:setString("")
 	end
-
+	self:mark(isMark)
 end
 
 function DCDataCell:mark( isMark )
-	if self.isMark == isMark then return end
+	--if self.isMark == isMark then return end
 	self.isMark = isMark
 	if isMark then
 		local newData = GMODEL(MOD.DC):getDCMgr():getNewDCData()
-		if self.info[1]==newData.r[1] then
-			self.luckR1:setLabelColor(gd.FCOLOR.c18)
-		else
-			self.luckR1:setLabelColor(gd.FCOLOR.c12)
-		end
-		if self.info[2]==newData.r[2] then
-			self.luckR2:setLabelColor(gd.FCOLOR.c18)
-		else
-			self.luckR2:setLabelColor(gd.FCOLOR.c12)
-		end
-		if self.info[3]==newData.r[3] then
-			self.luckR3:setLabelColor(gd.FCOLOR.c18)
-		else
-			self.luckR3:setLabelColor(gd.FCOLOR.c12)
-		end
-		if self.info[4]==newData.r[4] then
-			self.luckR4:setLabelColor(gd.FCOLOR.c18)
-		else
-			self.luckR4:setLabelColor(gd.FCOLOR.c12)
-		end
-		if self.info[5]==newData.r[5] then
-			self.luckR5:setLabelColor(gd.FCOLOR.c18)
-		else
-			self.luckR5:setLabelColor(gd.FCOLOR.c12)
-		end
-		if self.info[6]==newData.r[6] then
-			self.luckR6:setLabelColor(gd.FCOLOR.c18)
-		else
-			self.luckR5:setLabelColor(gd.FCOLOR.c12)
+		for i=1,6 do
+			local v = self.info[i]
+			local tmpMark = false
+			for _,newD in ipairs(newData.r) do
+				if v==newD then
+					tmpMark = true
+					break
+				end
+			end
+			if tmpMark==true then
+				self["luckR"..i]:setLabelColor(gd.FCOLOR.c18)
+			else
+				self["luckR"..i]:setLabelColor(gd.FCOLOR.c12)
+			end
 		end
 
 		if self.info[7] and self.info[7]==newData.b1 then
@@ -196,8 +181,7 @@ function DCDrawResultUI:_initDateTableView()
 			cell = DCDataCell.new(_cellHitCall)
 		end
 		local data = self.dcDataList[#self.dcDataList+1-idx]
-		cell:setData(data)
-		cell:mark(self.isMark)
+		cell:setData(data, self.isMark)
 
 		return cell
 	end
