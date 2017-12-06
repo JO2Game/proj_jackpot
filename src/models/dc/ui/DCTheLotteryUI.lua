@@ -45,12 +45,12 @@ function DCTheLotteryUI:ctor()
 	self.curBlueStr = ""
 
 	self.isStartBlue = false
-	self.blueLb = gp.Label:create("", 52)
+	self.blueLb = gp.Label:create("", 48)
 	self.blueLb:setAnchorPoint(cc.p(1, 0.5))
 	self.blueLb:setLabelColor(gd.FCOLOR.c20)
 	self.blueLb:setOutline(2)
 	self:addChild(self.blueLb)
-	_VLP(self.blueLb, self.bg, vl.IN_R, cc.p(-60, 0))
+	_VLP(self.blueLb, self.bg, vl.IN_R, cc.p(-60, -10))
 	self.blueLb:setVisible(false)
 
 
@@ -149,6 +149,8 @@ function DCTheLotteryUI:reStart()
 	self.isStartBlue = false
 	self.blueLb:setVisible(false)
 	self.blueLb:setString("")
+	self.blueLb:stopAllActions()
+	self.blueLb:setScale(1)
 
 	self.lotteryLb:stopAllActions()
 	self.lotteryLb:setVisible(true)
@@ -269,7 +271,7 @@ function DCTheLotteryUI:_setOneRed(  )
 			self.reloadBtn:setCatchTouch(false)
 			self.nextNumBtn:setCatchTouch(false)
 			
-			local seq = cc.Sequence:create(cc.Spawn:create(cc.MoveBy:create(0.6, cc.p(0, 40)),cc.ScaleTo:create(0.6,0.6)), cc.CallFunc:create(_moveLotteryLbCall))
+			local seq = cc.Sequence:create(cc.Spawn:create(cc.MoveBy:create(0.2, cc.p(0, 40)),cc.ScaleTo:create(0.2,0.72)), cc.CallFunc:create(_moveLotteryLbCall))
 			self.lotteryLb:runAction(seq)
 		else
 			self:_saveWinData()
@@ -321,6 +323,11 @@ function DCTheLotteryUI:_saveWinData(  )
 	particle:setAutoRemoveOnFinish(true)
 	self:addChild(particle)
 	_VLP(particle)
+
+	local seq = cc.Sequence:create(cc.Spawn:create(cc.MoveBy:create(0.1, cc.p(0, -18)),cc.ScaleTo:create(0.1,0.8)))
+	self.lotteryLb:runAction(seq)
+
+	self.blueLb:runAction(cc.ScaleTo:create(0.1,0.78))
 end
 
 function DCTheLotteryUI:onEnter(  )

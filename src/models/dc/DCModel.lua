@@ -95,6 +95,9 @@ function DCModel:updateDCData(  )
 		return false
 	end
 
+	local function _tonumaber( v, k )
+		return tonumber(v)
+	end
 	local function _httpCallback( http )
 		JOWinMgr:Instance():clear(gd.LAYER_WAIT)
 		---[[
@@ -123,7 +126,8 @@ function DCModel:updateDCData(  )
 						temps = gp.str.split(d.opencode, "+")
 						dc.b1 = tonumber(temps[2])
 						temps = gp.str.split(temps[1], ",")
-						table.sort(temps)
+						table.sort(temps)						
+						gp.table.map(temps, _tonumaber)
 						dc.r = temps
 						--[[
 						dc.r1 = tonumber(temps[1])

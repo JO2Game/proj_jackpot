@@ -5,7 +5,7 @@
 =================================
 ]]
 
-local DC_SIZE = cc.size(210, 98)
+local DC_SIZE = cc.size(210, 88)
 
 local DCDataCell =  class("DCDataCell", gp.TableViewCell )
 

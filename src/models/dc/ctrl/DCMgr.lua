@@ -161,7 +161,6 @@ function DCMgr:getNewDCData(  )
 	if self.newDCData then
 		return self.newDCData
 	end
-	
 	local allData = self:getAllData()
 	local datas = allData[self:getNewYear()]
 	if datas then		

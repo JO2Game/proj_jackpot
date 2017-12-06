@@ -65,18 +65,18 @@ end
 
 function ProjToGame:payAlertClose()
 	PlatformMgr.isPaying = false
-	GameWorld:getUIMgr():clearAlert()
+	UIManager:clearAlert()
 end
 
 function ProjToGame:showVersionUpdateDlg()
-	GameWorld:getUIMgr():removeWaiting()
+	UIManager:removeWaiting()
 	local function _alertCallback(tag)			
         local mgr = GameWorld:getLoginModule():getMgr()
 		local serInfo = mgr:getServerWithId(mgr.defServerId)
 
         if serInfo == nil then
             local alert = createAlertOK("serInfo == nil defServerId == %s", tostring(mgr.defServerId))
-	        GameWorld:getUIMgr():showAlert(alert)
+	        UIManager:showAlert(alert)
             return
         end
         local platformModule = nil
@@ -99,7 +99,7 @@ function ProjToGame:showVersionUpdateDlg()
 			end       
         else
             local alert = createAlertOK("clientUpdateUrl == nil ")
-	        GameWorld:getUIMgr():showAlert(alert)
+	        UIManager:showAlert(alert)
         end
 	end
 	
@@ -114,7 +114,7 @@ function ProjToGame:showVersionUpdateDlg()
 		alert.cancelText = _TT(156)
 	end	
 	--alert:setMsgHorizontalAlignment(cc.TEXT_ALIGNMENT_LEFT);
-	GameWorld:getUIMgr():showAlert(alert)	
+	UIManager:showAlert(alert)	
 end
 
 function ProjToGame:showDownloadDlg(progress)	
@@ -191,12 +191,12 @@ end
 
 function ProjToGame:showWaiting()
 	--showWaiting(18)
-	GameWorld:getUIMgr():showWaitingAlways()
+	UIManager:showWaitingAlways()
 end
 
 function ProjToGame:hideWaiting()
 	--removeWaiting()
-	GameWorld:getUIMgr():removeWaitingAlways()
+	UIManager:removeWaitingAlways()
 end
 
 function ProjToGame:pickImage(jsonParam)
