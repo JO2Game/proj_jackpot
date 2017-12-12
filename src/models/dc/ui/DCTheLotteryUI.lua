@@ -228,27 +228,6 @@ function DCTheLotteryUI:_randomBlue(  )
 end
 
 function DCTheLotteryUI:_setOneRed(  )
-	--筛选每个位的号码
-	local data = self.tmpResultList[self.tmpIdx]
-	if data==nil then
-		gp.Factory:noiceView("red data==nil")
-		return
-	end
-
-	if self.curPos<=6 then
-		local posData = data[self.curPos]
-		table.insert(self.curData, posData)
-		
-		if self.curPos==1 then
-			self.curStr = string.format("%02d", posData)
-		else
-			self.curStr = string.format("%s, %02d", self.curStr, posData)
-		end
-		if self.curPos<6 then
-			self:exactRange()
-		end
-		self.tmpIdx = math.random(1, self.tmpResultCnt)
-	end
 
 	if self.curPos>6 then
 		self.curPos = 6
@@ -278,17 +257,46 @@ function DCTheLotteryUI:_setOneRed(  )
 		end
 		return
 	end
-	self.curPos = self.curPos+1
+	
+	if self.curPos<=6 then
+		--筛选每个位的号码
+		local data = self.tmpResultList[self.tmpIdx]
+		if data==nil then
+			gp.Factory:noiceView("red data==nil")
+			return
+		end
+
+		local posData = data[self.curPos]
+		table.insert(self.curData, posData)
+		
+		if self.curPos==1 then
+			self.curStr = string.format("%02d", posData)
+		else
+			self.curStr = string.format("%s, %02d", self.curStr, posData)
+		end
+		if self.curPos<6 then
+			self:exactRange()
+		end
+		self.tmpIdx = math.random(1, self.tmpResultCnt)
+		self.curPos = self.curPos+1
+	end
 end
 
 function DCTheLotteryUI:_setOneBlue(  )
-	local data = self.blueTmpResultList[self.blueTmpIdx]
-	if data==nil then
-		gp.Factory:noiceView("blue data==nil")
+
+	if self.bluePos>self.blueCount then
+		self.bluePos = self.blueCount
+		self.isStartBlue=false
+		self:_saveWinData()
 		return
 	end
 
 	if self.bluePos<=self.blueCount then
+		local data = self.blueTmpResultList[self.blueTmpIdx]
+		if data==nil then
+			gp.Factory:noiceView("blue data==nil")
+			return
+		end
 		table.insert(self.curData, data)
 		if self.bluePos==1 then
 			self.curBlueStr = string.format("%02d", data)
@@ -304,15 +312,9 @@ function DCTheLotteryUI:_setOneBlue(  )
 
 		self.blueTmpResultCnt = #self.blueTmpResultList
 		self.blueTmpIdx = math.random(1, self.blueTmpResultCnt)
+
+		self.bluePos = self.bluePos+1
 	end
-	
-	if self.bluePos>self.blueCount then
-		self.bluePos = self.blueCount
-		self.isStartBlue=false
-		self:_saveWinData()
-		return
-	end
-	self.bluePos = self.bluePos+1
 end
 
 
