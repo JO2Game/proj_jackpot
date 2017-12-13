@@ -72,6 +72,7 @@ function DCMgr:getAllData(  )
 			--LOG_WARN("DCAnalysisMgr", "yds count %d", gp.table.nums(yds))
 			for _,v in pairs(yds) do
 				--local key = v.r1+v.r2*100+v.r3*10000+v.r4*1000000+v.r5*100000000+v.r6*10000000000
+				--LOG_WARN("a", gp.table.tostring(v))
 				local key = v.r[1]+v.r[2]*100+v.r[3]*10000+v.r[4]*1000000+v.r[5]*100000000+v.r[6]*10000000000
 				self.allDataMap[key] = v
 			end
