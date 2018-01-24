@@ -84,8 +84,9 @@ end
 function DCDataAnalysisUI:onEnter(  )
 	DCDataAnalysisUI.super.onEnter(self)
 
+	GMODEL(MOD.DC):getDCStatisticsMgr():numCount_desc()
 	self.descList = gp.table.mergeList(
-		 			GMODEL(MOD.DC):getDCStatisticsMgr():numApp_desc(),
+		 			--GMODEL(MOD.DC):getDCStatisticsMgr():numCount_desc(),
 					GMODEL(MOD.DC):getDCStatisticsMgr():lastBlueBallInRed_desc(),
 					GMODEL(MOD.DC):getDCStatisticsMgr():sameSection_desc(),
 					GMODEL(MOD.DC):getDCStatisticsMgr():even_desc(),

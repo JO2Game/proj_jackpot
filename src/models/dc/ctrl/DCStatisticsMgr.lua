@@ -617,4 +617,88 @@ function DCStatisticsMgr:numApp_desc(  )
 	return desc
 end
 
+function DCStatisticsMgr:numCount_desc( stageCount )
+	if self.numCountDesc then
+		return self.numCountDesc
+	end
+	stageCount = stageCount or 8
+	local tmpStageCount = stageCount
+	local dataMap = {}
+	local tmpDataMap = {}
+	local allData = GMODEL(MOD.DC):getDCMgr():getAllData()
+	local allYearKeys = gp.table.keys(allData)
+	local allYearCount = #allYearKeys
+	for j=1,allYearCount do
+		local yds = allData[allYearKeys[j]]
+		local allKeys = gp.table.keys(yds)
+		table.sort( allKeys )
+		local keysCount = #allKeys
+		for k=1,keysCount do
+			local v = yds[allKeys[k]]
+			if tmpStageCount <=0 then
+				tmpStageCount = 1
+				dataMap[v.stage] = tmpDataMap
+				local newDataMap = {}
+				for i=2,stageCount do
+					table.insert(newDataMap, tmpDataMap[i])
+				end
+				tmpDataMap = newDataMap
+			end
+			table.insert(tmpDataMap, v)
+			
+			tmpStageCount = tmpStageCount-1
+		end
+	end
+	
+
+	local desc = {}
+	local stageKeys = table.keys(dataMap)
+	table.sort(stageKeys)
+	local totalStageCount = #stageKeys
+	--for _,k in ipairs(stageKeys) do
+	local startIdx = totalStageCount-30
+	if startIdx<1 then
+		startIdx = 1
+	end
+	for i=startIdx,totalStageCount do
+		local k = stageKeys[i]		
+		local dlist = dataMap[k]
+		local tmpDM = {}
+		for _,rs in ipairs(dlist) do
+			for _,r in ipairs(rs.r) do
+				if tmpDM[r] then
+					tmpDM[r] = tmpDM[r]+1
+				else
+					tmpDM[r] = 1
+				end
+			end
+		end
+		local stageData = GMODEL(MOD.DC):getDCMgr():getDataWithStage(k)
+		local tmpDesc = k.." ==> "..table.concat(stageData.r, ",")..": \n"
+		for num,count in pairs(tmpDM) do
+			tmpDesc=tmpDesc..string.format("%d:[%d]  ", num, count)
+		end
+		tmpDesc=tmpDesc.."\n===================================\n"
+		for _,rs in ipairs(dlist) do
+			tmpDesc = tmpDesc..string.format("[%d] %s", rs.stage, table.concat(rs.r, ","))
+		end
+		tmpDesc=tmpDesc.."\n"
+		for _,r in ipairs(stageData.r) do
+			if tmpDM[r] then
+				tmpDM[r] = tmpDM[r]+1
+			else
+				tmpDM[r] = 1
+			end
+		end
+		for num,count in pairs(tmpDM) do
+			tmpDesc=tmpDesc..string.format("%d:[%d]  ", num, count)
+		end
+		tmpDesc=tmpDesc.."\n+++++++++++++++++++++++++++++++++++++++++++\n"
+		print(tmpDesc)
+		table.insert(desc, tmpDesc)
+	end
+
+	self.numCountDesc = desc
+	return desc
+end
 return DCStatisticsMgr

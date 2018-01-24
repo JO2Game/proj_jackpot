@@ -61,11 +61,13 @@ function DCTopMessageView:ctor()
 			end
 		end
 		if self.drawResultUI:isVisible() then
+			--[[
 			if #self.selBtns>0 then
 				_VLP(self.drawResultUI, self, vl.OUT_B_IN_R, cc.p(0,16))
 			else
 				_VLP(self.drawResultUI, self, vl.OUT_B_IN_L, cc.p(0,16))
 			end
+			--]]
 		end
 	end
 
@@ -93,11 +95,13 @@ function DCTopMessageView:ctor()
 		else
 			self.drawResultUI:setVisible(true)
 			self.drawResultUI:setupData()
+			--[[
 			if #self.selBtns>0 then
 				_VLP(self.drawResultUI, self, vl.OUT_B_IN_R, cc.p(0,16))
 			else
 				_VLP(self.drawResultUI, self, vl.OUT_B_IN_L, cc.p(0,16))
 			end
+			--]]
 		end
 	end
 

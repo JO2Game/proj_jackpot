@@ -36,7 +36,7 @@ function DCMgr:_initData()
 
 	local allStage = self:getAllStage(_allStageCall)
 	if allStage then
-		self.totalStageCount = #allStage
+		self.totalStageCount = gp.table.nums(allStage)
 	end
 end
 
@@ -80,18 +80,23 @@ function DCMgr:getAllData(  )
 	return allData
 end
 
+function DCMgr:getDataWithStage( stage )
+	local allStage = self:getAllStage()
+	return allStage[stage]
+end
+
 function DCMgr:getAllStage( )
-	if self.allStage and #self.allStage>0 then
+	if self.allStage and next(self.allStage)  then
 		return self.allStage
 	end
 	local allData = self:getAllData()
 	self.allStage = {}
 	for _,v in pairs(allData) do
 		for _,vv in pairs(v) do
-			table.insert(self.allStage, vv.stage)
+			self.allStage[vv.stage] = vv
 		end
 	end
-	table.sort( self.allStage )
+--	table.sort( self.allStage )
 	return self.allStage
 end
 
