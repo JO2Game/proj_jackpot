@@ -208,6 +208,8 @@ function DCTheLotteryUI:_randomRed(  )
 
 	self.tmpIdx = math.random(1, self.tmpResultCnt)
 	local data = self.tmpResultList[self.tmpIdx]
+	if data==nil then return end
+
 	if self.curPos==1 then
 		self.lotteryLb:setString(string.format("%02d", data[self.curPos]))
 	elseif self.curPos>1 then
@@ -220,6 +222,8 @@ function DCTheLotteryUI:_randomBlue(  )
 
 	self.blueTmpIdx = math.random(1, self.blueTmpResultCnt)
 	local data = self.blueTmpResultList[self.blueTmpIdx]
+	if data==nil then return end
+
 	if self.bluePos==1 then
 		self.blueLb:setString(string.format("%02d", data))
 	else
@@ -295,6 +299,7 @@ function DCTheLotteryUI:_setOneBlue(  )
 		local data = self.blueTmpResultList[self.blueTmpIdx]
 		if data==nil then
 			gp.Factory:noiceView("blue data==nil")
+			self.bluePos = self.bluePos+1
 			return
 		end
 		table.insert(self.curData, data)
@@ -307,7 +312,7 @@ function DCTheLotteryUI:_setOneBlue(  )
 		
 		--容器里没有数据的情况下，重新填满
 		if not next(self.blueTmpResultList) then
-			self.blueTmpResultList = gp.Table.copy(self.blueResultList)
+			self.blueTmpResultList = gp.table.copy(self.blueResultList)
 		end
 
 		self.blueTmpResultCnt = #self.blueTmpResultList
