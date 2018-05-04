@@ -32,6 +32,7 @@ function DCTheLotteryUI:ctor()
 	self.curStr = ""
 	self.curData = {}--筛选出来的数据
 	self.isStart = false
+	self.RED_TIME = 0
 
 	self.blueResultList = {}
 	for i=1,16 do
@@ -132,6 +133,7 @@ function DCTheLotteryUI:ctor()
 end
 
 function DCTheLotteryUI:reStart()
+	self.RED_TIME = 10
 	self.tmpIdx = 1
 	self.curPos=1 --当前位置
 	self.curStr = ""
@@ -157,34 +159,49 @@ function DCTheLotteryUI:reStart()
 	self.lotteryLb:setScale(1)
 	self.lotteryLb:setString(EMPTY_TEXT)
 	_VLP(self.lotteryLb, self.bg, vl.IN_L, cc.p(20, 10))
-
+	self:setNumList(1)
 	gp.TickMgr:register(self)
 end
 
+--从候选范围内筛选
 function DCTheLotteryUI:exactRange()
 	if self.curPos>0 then
 		local tmpR = self.tmpResultList
 		local cnt = self.tmpResultCnt
 		self.tmpResultList = {}
 
-		local isAccord = true
 		for _,v in ipairs(tmpR) do
-			isAccord = true
-			for i=1,self.curPos do
-				if v[i]~=self.curData[i] then
-					isAccord = false
-					break
-				end
-			end
-
-			if isAccord==true then
+			if v[self.curPos]==self.curData[self.curPos] then
+				
+				--print("11111111111111111111 "..self.curData[self.curPos])
+				--print("11111111111111111111 "..v[self.curPos])
 				table.insert(self.tmpResultList, v)
 			end
 		end
+		
 		self.tmpResultCnt = #self.tmpResultList
 		if self.tmpResultCnt==0 then
 			gp.Factory:noiceView("没有合适的数据")
 		end
+		self:setNumList(self.curPos+1)
+	end
+end
+
+function DCTheLotteryUI:setNumList(idx)
+	local curNumMap = {}
+	for _,v in ipairs(self.tmpResultList) do
+		if v[idx] then
+			curNumMap[v[idx]] = true
+		end
+	end
+	if next(curNumMap) then
+		self.curNumList = {}
+		for k,_ in pairs(curNumMap) do
+			table.insert(self.curNumList, k)
+		end
+		table.sort(self.curNumList)
+		self.curNumCount = #self.curNumList
+		self.tmpIdx = math.ceil(math.random(1, self.curNumCount))
 	end
 end
 
@@ -194,6 +211,7 @@ function DCTheLotteryUI:setSelId(selId)
 	self.resultCnt = 0
 	self.lotteryLb:setString(EMPTY_TEXT)
 end
+
 
 function DCTheLotteryUI:tick()
 	if self.isStart and self.tmpResultCnt>0 then
@@ -205,7 +223,22 @@ end
 
 function DCTheLotteryUI:_randomRed(  )
 	if self.curPos<1 or self.curPos>6 then return end
-
+	self.RED_TIME = self.RED_TIME + gp.TickMgr.deltaTime
+	if self.RED_TIME > 0.1 then 
+		self.RED_TIME = 0
+		self.tmpIdx = self.tmpIdx+1
+		if self.tmpIdx>self.curNumCount then
+			self.tmpIdx = 1
+		end
+		local data = self.curNumList[self.tmpIdx]
+		if data==nil then return end
+		if self.curPos==1 then
+			self.lotteryLb:setString(string.format("%02d", data))
+		elseif self.curPos>1 then
+			self.lotteryLb:setString(string.format("%s, %02d", self.curStr, data))
+		end
+	end
+	--[[	
 	self.tmpIdx = math.random(1, self.tmpResultCnt)
 	local data = self.tmpResultList[self.tmpIdx]
 	if data==nil then return end
@@ -215,6 +248,7 @@ function DCTheLotteryUI:_randomRed(  )
 	elseif self.curPos>1 then
 		self.lotteryLb:setString(string.format("%s, %02d", self.curStr, data[self.curPos]))
 	end
+	--]]
 end
 
 function DCTheLotteryUI:_randomBlue(  )
@@ -264,6 +298,7 @@ function DCTheLotteryUI:_setOneRed(  )
 	
 	if self.curPos<=6 then
 		--筛选每个位的号码
+		--[[
 		local data = self.tmpResultList[self.tmpIdx]
 		if data==nil then
 			gp.Factory:noiceView("red data==nil")
@@ -271,6 +306,12 @@ function DCTheLotteryUI:_setOneRed(  )
 		end
 
 		local posData = data[self.curPos]
+		--]]
+		local posData = self.curNumList[self.tmpIdx]
+		if posData==nil then
+			gp.Factory:noiceView("red data==nil")
+			return
+		end
 		table.insert(self.curData, posData)
 		
 		if self.curPos==1 then
@@ -281,7 +322,7 @@ function DCTheLotteryUI:_setOneRed(  )
 		if self.curPos<6 then
 			self:exactRange()
 		end
-		self.tmpIdx = math.random(1, self.tmpResultCnt)
+		--self.tmpIdx = math.random(1, self.tmpResultCnt)
 		self.curPos = self.curPos+1
 	end
 end

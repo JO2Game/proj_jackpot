@@ -138,6 +138,12 @@ function DCAnalysisMgr:conditionTypes2Calculation(conditionTypes)
 		calculation.lastBlue = true
 	end
 
+	--[[冷热号筛选]]
+	calculation.coolHot = false
+	if _isKeyInList(conditionTypes, glg.DC.ANALYS_CUSTOM_TYPE_COOL_HOT) then
+		calculation.coolHot = true
+	end
+
 	--LOG_INFO("DCAnalysisMgr", "condition = %s", gp.table.tostring(self.condition))
 	return calculation
 end
@@ -157,6 +163,7 @@ function DCAnalysisMgr:_toConditionInfo( conditionData )
 	if selRedSet and #selRedSet>0 then
 		table.insert(contextArr, string.format(_TT("dc","DC32"),table.concat(selRedSet, ", ")))
 	end
+
 	if conditionData.filterEvenSet and #conditionData.filterEvenSet>0 then
 		local nStr = {}
 		for _,v in ipairs(conditionData.filterEvenSet) do
@@ -224,7 +231,9 @@ function DCAnalysisMgr:_toConditionInfo( conditionData )
 	if calculation.lastBlue==true then
 		table.insert(contextArr, _TT("dc","DC75"))
 	end
-	
+	if calculation.coolHot==true then
+		table.insert(contextArr, _TT("dc","DC101"))
+	end
 	return table.concat(contextArr, "\n");
 end
 function DCAnalysisMgr:showConditionView( alertCall, condition )
@@ -445,6 +454,7 @@ function DCAnalysisMgr:_customFilter(data)
 		self:_filterSequenceRange(data) or
 		self:_filterRedOverLess(data) or 
 		self:_filterSingle_Double(data) or
+		self:_filterCoolHot(data) or
 		self:_filterEven(data) or 
 		self:_filterInterval(data) or
 		self:_filterFixedEven(data) or
@@ -728,6 +738,31 @@ function DCAnalysisMgr:_filterLastBlue( data )
 	for _,v in ipairs(data) do
 		if v==newd.b1 then
 			return true		
+		end
+	end
+end
+
+--忽略上期蓝球
+function DCAnalysisMgr:_filterCoolHot( data )
+	if self.calculation.coolHot~=true then return false end
+
+	local hotdata = GMODEL(MOD.DC):getDCStatisticsMgr():coolHot(true)
+	local val = nil
+	local count = 0
+	--热组合的计数
+	local hotGroupCount = 0
+	for _,v in ipairs(data) do
+		val = hotdata[v]
+		if val==nil then
+			count = count+1
+		elseif val>2 then
+			hotGroupCount = hotGroupCount+1
+			if val>4 then
+				return true
+			end
+		end
+		if count>2 or hotGroupCount>3 then
+			return true	
 		end
 	end
 end

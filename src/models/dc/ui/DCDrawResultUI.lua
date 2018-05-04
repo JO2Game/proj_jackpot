@@ -5,7 +5,7 @@
 =================================
 ]]
 
-local DC_SIZE = cc.size(210, 88)
+local DC_SIZE = cc.size(210, 80)
 
 local DCDataCell =  class("DCDataCell", gp.TableViewCell )
 
@@ -19,7 +19,7 @@ function DCDataCell:ctor(callback)
 
 	self.isMark = false
 
-	local RH = 20
+	local RH = 18
 	local RW = 18
 	self.luckR1 = gp.Label:create("", 20, gd.FCOLOR.c12)
 	self.luckR1:setAnchorPoint(cc.p(0, 0.5))
@@ -51,7 +51,7 @@ function DCDataCell:ctor(callback)
 	self:addChild(self.luckR6)
 	_VLP(self.luckR6, self, vl.IN_L, cc.p(RW+30*5,RH))
 
-	local BH = -20
+	local BH = -18
 	
 	local function _btnCall( btn )
 		if callback then
@@ -160,12 +160,12 @@ function DCDrawResultUI:ctor(title)
 end
 
 function DCDrawResultUI:_initDateTableView()
-	local tableView = gp.TableView.new(cc.size(self:getContentSize().width-10, self:getContentSize().height-180))
+	local tableView = gp.TableView.new(cc.size(self:getContentSize().width-10, self:getContentSize().height-160))
 	tableView:setDirection(cc.SCROLLVIEW_DIRECTION_VERTICAL)
 	tableView:setMargin(4)
 	self:addChild(tableView)
 
-	_VLP(tableView, self, vl.IN_BL, cc.p(0, 60))
+	_VLP(tableView, self, vl.IN_B, cc.p(0, 60))
 
 	local function _cellHitCall( dcData )
 		GMODEL(MOD.DC):getDCStorageMgr():removeDrawData(dcData)
@@ -224,14 +224,14 @@ function DCDrawResultUI:_initBtn()
 	btnClear:setContentSize(cc.size(180,38))
 	btnClear:setTag(1)
 	self:addChild(btnClear)
-	_VLP(btnClear, self, vl.IN_B, cc.p(0,18))
+	_VLP(btnClear, self, vl.IN_B, cc.p(0,14))
 	
 
 	local btnMark = gp.SelButton:create("Top2Bg_V2.png", _btnCall, "标志")
 	btnMark:setContentSize(cc.size(180,32))
 	btnMark:setTag(2)
 	self:addChild(btnMark)
-	_VLP(btnMark, self.dataTableView, vl.OUT_T, cc.p(0, 10))
+	_VLP(btnMark, self.dataTableView, vl.OUT_T, cc.p(0, 8))
 
 end
 

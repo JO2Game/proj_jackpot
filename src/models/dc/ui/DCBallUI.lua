@@ -23,6 +23,9 @@ function DCBallUI:onEnter(  )
 		--local context = string.format("%d,%d,%d,%d,%d,%d|%d [%d]", data.r1,data.r2,data.r3,data.r4,data.r5,data.r6,data.b1,data.stage)
 		local context = string.format("%s|%d [%d]", table.concat(data.r, ","),data.b1,data.stage)
 		self.topView:setNewData(context)
+
+		GMODEL(MOD.DC):getDCStatisticsMgr().coolHot_all = nil
+		GMODEL(MOD.DC):getDCStatisticsMgr().coolHot_noAll = nil
 	end
 	
 	gp.MessageMgr:regEvent(self.sn, ENT.DC_ADD_HISTORY_DATA, _ADD_HISTORY_DATA_Handle)

@@ -617,6 +617,71 @@ function DCStatisticsMgr:numApp_desc(  )
 	return desc
 end
 
+--
+function DCStatisticsMgr:coolHot( isAll )
+	
+	if isAll==true then
+		if self.coolHot_all then
+			return self.coolHot_all
+		end
+	else
+		if self.coolHot_noAll then
+			return self.coolHot_noAll
+		end
+	end
+
+	local tmpStageCount = 8
+	local tmpDataList = {}
+	local allData = GMODEL(MOD.DC):getDCMgr():getAllData()
+	local allYearKeys = gp.table.keys(allData)
+	table.sort( allYearKeys )
+	local allYearCount = #allYearKeys
+	for j=allYearCount, 1, -1 do
+		local yds = allData[allYearKeys[j]]
+		local allKeys = gp.table.keys(yds)
+		table.sort( allKeys )
+		local keysCount = #allKeys
+		for k=keysCount,1, -1 do
+			local v = yds[allKeys[k]]
+			if tmpStageCount <=0 then
+				break
+			end
+			table.insert(tmpDataList, v)
+			tmpStageCount = tmpStageCount-1
+		end
+		if tmpStageCount <=0 then
+			break
+		end
+	end
+
+	local tmpDM = {}
+	if isAll then
+		for _,rs in ipairs(tmpDataList) do
+			for _,r in ipairs(rs.r) do
+				if tmpDM[r] then
+					tmpDM[r] = tmpDM[r]+1
+				else
+					tmpDM[r] = 1
+				end
+			end
+		end
+		self.coolHot_all = tmpDM
+	else
+		local tmpCount = #tmpDataList
+		for i=2,tmpCount do
+			for _,r in ipairs(tmpDataList[i].r) do
+				if tmpDM[r] then
+					tmpDM[r] = tmpDM[r]+1
+				else
+					tmpDM[r] = 1
+				end
+			end
+		end
+		self.coolHot_noAll = tmpDM
+	end
+	return tmpDM
+end
+
 function DCStatisticsMgr:numCount_desc( stageCount )
 	if self.numCountDesc then
 		return self.numCountDesc
@@ -627,6 +692,7 @@ function DCStatisticsMgr:numCount_desc( stageCount )
 	local tmpDataMap = {}
 	local allData = GMODEL(MOD.DC):getDCMgr():getAllData()
 	local allYearKeys = gp.table.keys(allData)
+	table.sort( allYearKeys )
 	local allYearCount = #allYearKeys
 	for j=1,allYearCount do
 		local yds = allData[allYearKeys[j]]
@@ -673,14 +739,24 @@ function DCStatisticsMgr:numCount_desc( stageCount )
 				end
 			end
 		end
+
+		local lineCount = 10
+		local tmpLineCount = 0
+
 		local stageData = GMODEL(MOD.DC):getDCMgr():getDataWithStage(k)
 		local tmpDesc = k.." ==> "..table.concat(stageData.r, ",")..": \n"
 		for num,count in pairs(tmpDM) do
-			tmpDesc=tmpDesc..string.format("%d:[%d]  ", num, count)
+			tmpLineCount=tmpLineCount+1
+			if tmpLineCount>=lineCount then
+				tmpLineCount = 0
+				tmpDesc=tmpDesc..string.format("%02d:[%d]  \n", num, count)
+			else
+				tmpDesc=tmpDesc..string.format("%02d:[%d]  ", num, count)
+			end
 		end
 		tmpDesc=tmpDesc.."\n===================================\n"
 		for _,rs in ipairs(dlist) do
-			tmpDesc = tmpDesc..string.format("[%d] %s", rs.stage, table.concat(rs.r, ","))
+			tmpDesc = tmpDesc..string.format("[%d] %s\n", rs.stage, table.concat(rs.r, ","))
 		end
 		tmpDesc=tmpDesc.."\n"
 		for _,r in ipairs(stageData.r) do
@@ -690,8 +766,16 @@ function DCStatisticsMgr:numCount_desc( stageCount )
 				tmpDM[r] = 1
 			end
 		end
+		
+		tmpLineCount = 0
 		for num,count in pairs(tmpDM) do
-			tmpDesc=tmpDesc..string.format("%d:[%d]  ", num, count)
+			tmpLineCount=tmpLineCount+1
+			if tmpLineCount>=lineCount then
+				tmpLineCount = 0
+				tmpDesc=tmpDesc..string.format("%02d:[%d]  \n", num, count)
+			else
+				tmpDesc=tmpDesc..string.format("%02d:[%d]  ", num, count)
+			end
 		end
 		tmpDesc=tmpDesc.."\n+++++++++++++++++++++++++++++++++++++++++++\n"
 		print(tmpDesc)
