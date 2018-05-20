@@ -31,6 +31,8 @@ function DCTheLotteryUI:ctor()
 	self.curPos = 0--当前位置
 	self.curStr = ""
 	self.curData = {}--筛选出来的数据
+	self.selNumMap = {2,3,4,5,6}
+	self.selNumIdx = 1
 	self.isStart = false
 	self.RED_TIME = 0
 
@@ -138,6 +140,8 @@ function DCTheLotteryUI:reStart()
 	self.curPos=1 --当前位置
 	self.curStr = ""
 	self.curData = {}
+	self.selNumMap = {2,3,4,5,6}
+	self.selNumIdx = 1
 	self.tmpResultList = self.resultList
 	self.tmpResultCnt = self.resultCnt
 	if self.resultCnt>0 then
@@ -171,7 +175,8 @@ function DCTheLotteryUI:exactRange()
 		self.tmpResultList = {}
 
 		for _,v in ipairs(tmpR) do
-			if v[self.curPos]==self.curData[self.curPos] then
+			if v[self.selNumIdx]==self.curData[self.selNumIdx] then
+			--if v[self.curPos]==self.curData[self.curPos] then
 				
 				--print("11111111111111111111 "..self.curData[self.curPos])
 				--print("11111111111111111111 "..v[self.curPos])
@@ -183,7 +188,13 @@ function DCTheLotteryUI:exactRange()
 		if self.tmpResultCnt==0 then
 			gp.Factory:noiceView("没有合适的数据")
 		end
-		self:setNumList(self.curPos+1)
+		---[[
+		local idx = math.ceil(math.random(1, #self.selNumMap))
+		self.selNumIdx = self.selNumMap[idx]
+		table.remove(self.selNumMap, idx)
+		self:setNumList(self.selNumIdx)
+		--]]
+		--self:setNumList(self.curPos+1)
 	end
 end
 
@@ -224,7 +235,7 @@ end
 function DCTheLotteryUI:_randomRed(  )
 	if self.curPos<1 or self.curPos>6 then return end
 	self.RED_TIME = self.RED_TIME + gp.TickMgr.deltaTime
-	if self.RED_TIME > 0.1 then 
+	if self.RED_TIME > 0.02 then 
 		self.RED_TIME = 0
 		self.tmpIdx = self.tmpIdx+1
 		if self.tmpIdx>self.curNumCount then
@@ -232,11 +243,30 @@ function DCTheLotteryUI:_randomRed(  )
 		end
 		local data = self.curNumList[self.tmpIdx]
 		if data==nil then return end
+		--[[
 		if self.curPos==1 then
 			self.lotteryLb:setString(string.format("%02d", data))
 		elseif self.curPos>1 then
 			self.lotteryLb:setString(string.format("%s, %02d", self.curStr, data))
 		end
+		--]]
+		local tmpStr = nil
+		for i=1,6 do
+			if i==self.selNumIdx then
+				if tmpStr==nil then
+					tmpStr = string.format("%02d", data)
+				else
+					tmpStr = string.format("%s, %02d", tmpStr, data)
+				end
+			else
+				if tmpStr==nil then
+					tmpStr = string.format("%02d", self.curData[i] or 0)
+				else
+					tmpStr = string.format("%s, %02d", tmpStr, self.curData[i] or 0)	
+				end
+			end
+		end
+		self.lotteryLb:setString(tmpStr)
 	end
 	--[[	
 	self.tmpIdx = math.random(1, self.tmpResultCnt)
@@ -312,13 +342,16 @@ function DCTheLotteryUI:_setOneRed(  )
 			gp.Factory:noiceView("red data==nil")
 			return
 		end
-		table.insert(self.curData, posData)
-		
+		--table.insert(self.curData, posData)
+		self.curData[self.selNumIdx] = posData
+		--[[
 		if self.curPos==1 then
 			self.curStr = string.format("%02d", posData)
 		else
 			self.curStr = string.format("%s, %02d", self.curStr, posData)
 		end
+		--]]
+		self.curStr = string.format("%02d, %02d, %02d, %02d, %02d, %02d", self.curData[1] or 0, self.curData[2] or 0, self.curData[3] or 0, self.curData[4] or 0, self.curData[5] or 0, self.curData[6] or 0)
 		if self.curPos<6 then
 			self:exactRange()
 		end
@@ -343,7 +376,9 @@ function DCTheLotteryUI:_setOneBlue(  )
 			self.bluePos = self.bluePos+1
 			return
 		end
-		table.insert(self.curData, data)
+		--table.insert(self.curData, data)
+		self.curData[6+self.bluePos] = data
+
 		if self.bluePos==1 then
 			self.curBlueStr = string.format("%02d", data)
 		else
