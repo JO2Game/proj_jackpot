@@ -31,8 +31,11 @@ function DCTheLotteryUI:ctor()
 	self.curPos = 0--当前位置
 	self.curStr = ""
 	self.curData = {}--筛选出来的数据
-	self.selNumMap = {2,3,4,5,6}
+	self.selNumMap = {1,2,3,4,5,6}
 	self.selNumIdx = 1
+	local idx = math.ceil(math.random(1, #self.selNumMap))
+	self.selNumIdx = self.selNumMap[idx]
+	table.remove(self.selNumMap, idx)
 	self.isStart = false
 	self.RED_TIME = 0
 
@@ -140,8 +143,11 @@ function DCTheLotteryUI:reStart()
 	self.curPos=1 --当前位置
 	self.curStr = ""
 	self.curData = {}
-	self.selNumMap = {2,3,4,5,6}
+	self.selNumMap = {1,2,3,4,5,6}
 	self.selNumIdx = 1
+	local idx = math.ceil(math.random(1, #self.selNumMap))
+	self.selNumIdx = self.selNumMap[idx]
+	table.remove(self.selNumMap, idx)
 	self.tmpResultList = self.resultList
 	self.tmpResultCnt = self.resultCnt
 	if self.resultCnt>0 then
@@ -163,7 +169,7 @@ function DCTheLotteryUI:reStart()
 	self.lotteryLb:setScale(1)
 	self.lotteryLb:setString(EMPTY_TEXT)
 	_VLP(self.lotteryLb, self.bg, vl.IN_L, cc.p(20, 10))
-	self:setNumList(1)
+	self:setNumList(self.selNumIdx)
 	gp.TickMgr:register(self)
 end
 
